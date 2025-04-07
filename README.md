@@ -34,13 +34,10 @@ To meet these requirements, the solution is broken down into the following compo
 
 ## Technology Stack
 
-- **Azure Data Factory (ADF)**: For orchestrating data movement and transformation.
 - **Azure Data Lake Storage (ADLS)**: For storing raw and processed data.
 - **Azure Databricks**: For data transformation and processing.
-- **Azure Synapse Analytics**: For data warehousing and SQL-based analytics.
 - **Power BI**: For data visualization and reporting.
-- **Azure Key Vault**: For securely managing credentials and secrets.
-- **SQL Server (On-Premises)**: Source of customer and sales data.
+
 
 ## Setup Instructions
 
@@ -60,8 +57,7 @@ To meet these requirements, the solution is broken down into the following compo
 
 ### Step 2: Data Ingestion
 
-1. **Set up SQL Server**: Install SQL Server and SQL Server Management Studio (SSMS). Restore the AdventureWorks database.
-2. **Ingest Data with ADF**: Create pipelines in ADF to copy data from SQL Server to the `bronze` layer in ADLS.
+Using API 
 
 ### Step 3: Data Transformation
 
@@ -75,8 +71,8 @@ To meet these requirements, the solution is broken down into the following compo
 
 ### Step 5: Automation and Monitoring
 
-1. **Schedule Pipelines**: Use ADF to schedule the data pipelines to run daily.
-2. **Monitor Pipeline Runs**: Use the monitoring tools in ADF and Synapse to ensure successful pipeline execution.
+1. **Schedule Pipelines**: Use a databricks workflow to schedule the data pipelines to run daily.
+2. **Monitor Pipeline Runs**: Use the monitoring tools in Databricks to ensure successful pipeline execution.
 
 ### Step 6: Security and Governance
 
